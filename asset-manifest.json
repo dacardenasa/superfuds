@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/superfuds/static/css/main.1edfd029.chunk.css",
+    "main.js": "/superfuds/static/js/main.6f1b582e.chunk.js",
+    "main.js.map": "/superfuds/static/js/main.6f1b582e.chunk.js.map",
+    "runtime-main.js": "/superfuds/static/js/runtime-main.47935a93.js",
+    "runtime-main.js.map": "/superfuds/static/js/runtime-main.47935a93.js.map",
+    "static/css/2.1cd5c093.chunk.css": "/superfuds/static/css/2.1cd5c093.chunk.css",
+    "static/js/2.ec8ea2c3.chunk.js": "/superfuds/static/js/2.ec8ea2c3.chunk.js",
+    "static/js/2.ec8ea2c3.chunk.js.map": "/superfuds/static/js/2.ec8ea2c3.chunk.js.map",
+    "index.html": "/superfuds/index.html",
+    "precache-manifest.31b2f2d37fcbdf774672a0e6bb32b488.js": "/superfuds/precache-manifest.31b2f2d37fcbdf774672a0e6bb32b488.js",
+    "service-worker.js": "/superfuds/service-worker.js",
+    "static/css/2.1cd5c093.chunk.css.map": "/superfuds/static/css/2.1cd5c093.chunk.css.map",
+    "static/css/main.1edfd029.chunk.css.map": "/superfuds/static/css/main.1edfd029.chunk.css.map",
+    "static/js/2.ec8ea2c3.chunk.js.LICENSE.txt": "/superfuds/static/js/2.ec8ea2c3.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/superfuds/static/media/Gilroy-Light.c62aded7.otf",
+    "static/media/logo.svg": "/superfuds/static/media/logo.84cb5ac5.svg",
+    "static/media/Header.module.css": "/superfuds/static/media/profile.8039a005.jpg",
+    "static/media/slick-theme.css": "/superfuds/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47935a93.js",
+    "static/css/2.1cd5c093.chunk.css",
+    "static/js/2.ec8ea2c3.chunk.js",
+    "static/css/main.1edfd029.chunk.css",
+    "static/js/main.6f1b582e.chunk.js"
+  ]
+}
