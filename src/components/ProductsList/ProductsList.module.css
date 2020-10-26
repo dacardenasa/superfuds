@@ -1,0 +1,51 @@
+
+.customButtonLeft {
+    background: none;
+    border: none;
+    color: #25c16a;
+    cursor: pointer;
+    display: block;
+    font-size: 50px;
+    outline: inherit;
+    position: absolute;
+    top: 46%;
+    left: -2px;
+    z-index: 1;
+}
+
+.customButtonRight {
+    background: none;
+    border: none;
+    color: #25c16a;
+    cursor: pointer;
+    display: block;
+    font-size: 50px;
+    outline: inherit;
+    position: absolute;
+    top: 46%;
+    right: 0;
+    z-index: 1;
+}
+
+.containerStyles {
+    position: relative; 
+    width: 80%;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+.carrouselProducts {
+    width: 97%;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.carrouselContainer {
+    width: 4000px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index:0;
+}

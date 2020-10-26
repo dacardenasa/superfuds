@@ -1,0 +1,205 @@
+/*
+ * Styles for layout header
+ *
+ */
+.customButton {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    position: absolute;
+}
+
+.responsiveButton {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+}
+
+.responsiveSearchButton {
+    background: none;
+	color: inherit;
+    border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+}
+
+.headerBox {
+    background-color: #25C16A;
+    height: 90px;
+    width: 100%;
+    transition: all 300ms;
+}
+
+.containerBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 90%; 
+}
+
+.logoBox {
+    width: 20%;
+    align-self: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.mixPanelBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-left: 100px;
+    width: 80%;
+}
+
+.searchBox {
+    position: relative;
+    width: 60%;
+}
+
+.responsiveSearchBox {
+    padding-right: 10px;
+    display: none;
+}
+
+.searchBoxResponsive {
+    width: 80%;
+    align-self: center;
+    display: none;
+    padding-bottom: 15px;
+}
+
+.inputSearch {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-style: none;
+    padding: 10px;
+    width: 100%;
+    font-family: "Gilroy-Light";
+}
+
+.searchIcon {
+    color: rgb(153, 149, 149);
+    padding: 10px 15px;
+    position: absolute;
+    right: 0;
+}
+
+.responsiveSearchIcon {
+    color: #fff;
+    font-size: 30px;
+}
+
+.profileBox {
+    display: flex;
+}
+
+.profileResponsiveBox {
+    display: none;
+    padding-left: 5px;
+}
+
+.profileName {
+    color: #fff;
+    font-family: "Gilroy-ExtraBold";
+    font-size: 15px;
+}
+
+.myProfile {
+    color: #575555;
+    font-family: "Gilroy-Light";
+    font-size: 15px;
+    padding-right: 15px;
+}
+
+.profileMenuBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.arrowDownIcon {
+    color: #575555;
+    font-size: 15px;
+}
+
+.profileImg {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background: url("../../assets/img/profile.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.responsiveIconBox {
+    display: none;
+}
+
+.responsiveIconMenu {
+    color: #fff;
+    font-size: 36px;
+}
+
+@media (max-width: 992px) {
+    .mixPanelBox {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .headerBox {
+        display: flex;
+        flex-flow: column wrap;
+        height: auto;
+    }
+
+    .containerBox {
+        padding: 20px;
+    }
+
+    .mixPanelBox {
+        width: 50%;
+        justify-content: flex-end;
+    }
+    
+    .responsiveIconBox {
+        display: block;
+    }
+
+    .searchBox {
+        display: none;
+    }
+
+    .profileBox {
+        display: none;
+    }
+
+    .logoBox {
+        width: 50%;
+    }
+    
+    .responsiveSearchBox {
+        display: block;
+    }
+
+    .profileResponsiveBox {
+        display: block;
+    }
+}

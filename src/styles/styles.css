@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url("../assets/fonts/gilroy-free/Gilroy-FREE/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url("../assets/fonts/gilroy-free/Gilroy-FREE/Gilroy-Light.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+

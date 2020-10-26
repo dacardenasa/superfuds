@@ -1,0 +1,232 @@
+.customButton {
+    background: none;
+    color: #25c16a;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    outline: inherit;
+}
+
+.customButtonDelete {
+    background: none;
+    color: #8c8c8c;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    outline: inherit;
+}
+
+.containerShoppingCartBack {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(95, 94, 94, 0.801);
+    position: absolute;
+    z-index: 2;
+    transition: all 600ms;
+    top: 0;
+    right: -100%;
+}
+
+.containerShoppingCart {
+    width: 80%;
+    height: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    right: 0;
+}
+
+.backOptionBox {
+    width: 100%;
+    display: flex;
+}
+
+.spanBackButton {
+    align-self: center;
+    padding-left: 10px;
+    font-family: "Gilroy-light";
+}
+
+.shoppingCartHeader {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    font-family: "Gilroy-ExtraBold";
+    padding: 20px 0;
+}
+
+.numberItems {
+    align-self: center;
+    color: #25c16a;
+    font-size: 25px;
+}
+
+.itemSpan {
+    color: #000;
+}
+
+.tableProducts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.headerBox {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    font-family: "Gilroy-ExtraBold";
+    font-size: 30px;
+}
+
+.bodyBox {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 20px;
+}
+
+.columnHeader {
+    width: 30%;
+    text-align: center;
+}
+
+.columnHeader:last-child,
+.columnBody:last-child {
+    width: 10%;
+}
+
+.columnBody {
+    width: 30%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.containerImg {
+    width: 40%;
+}
+
+.descriptionProduct {
+    width: 60%;
+    padding-top: 15px;
+}
+
+.imgProduct {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-family: "Gilroy-ExtraBold";
+}
+
+.resume {
+    font-family: "Gilroy-Light";
+
+}
+
+.supplier {
+    font-family: "Gilroy-Light";
+    color: #25c16a;
+}
+
+.spanQuantity {
+    align-self: center;
+    padding: 25px;
+    font-family: "Gilroy-Light";
+    font-size: 25px;
+}
+
+.priceProduct {
+    align-self: center;
+    font-family: "Gilroy-ExtraBold";
+    font-size: 30px;
+}
+
+.currencyProduct {
+    color: #25c16a;
+}
+
+.totalBox {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    font-family: "Gilroy-ExtraBold";
+    font-size: 25px;
+    padding-top: 20px;
+    border-top: 4px solid #25c16a
+}
+
+.spanTotalPrice {
+    color: #25c16a;
+}
+
+@media(max-width: 768px) {
+    .containerShoppingCart {
+        width: 85%;
+    }
+
+    .columnBody:first-child {
+        flex-flow: column wrap;
+    }
+
+    .containerImg {
+        width: 100%;
+        text-align: center;
+    }
+
+    .descriptionProduct {
+        width: 100%;
+        padding-top: 15px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 576px) {
+    .containerShoppingCart {
+        width: 90%;
+    }
+
+    .columnBody:nth-child(2) {
+        flex-flow: column wrap;
+    }
+}
+
+@media(max-width: 450px) {
+    .containerShoppingCart {
+        width: 95%;
+    }
+
+    .priceProduct {
+        font-size: 25px;
+    }
+
+    .headerBox {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 350px) {
+    .containerShoppingCart {
+        width: 98%;
+    }
+
+    .columnBody:nth-child(2) {
+        flex-flow: column wrap;
+    }
+
+    .priceProduct {
+        font-size: 25px;
+    }
+
+    .headerBox {
+        font-size: 20px;
+    }
+}
