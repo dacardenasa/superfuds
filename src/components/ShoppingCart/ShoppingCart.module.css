@@ -204,12 +204,16 @@
         width: 95%;
     }
 
+    .tableProducts {
+        height: 50%;
+    }
+
     .priceProduct {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .headerBox {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -222,11 +226,7 @@
         flex-flow: column wrap;
     }
 
-    .priceProduct {
-        font-size: 25px;
-    }
-
     .headerBox {
-        font-size: 20px;
+        font-size: 15px;
     }
 }

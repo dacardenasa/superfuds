@@ -203,3 +203,11 @@
         display: block;
     }
 }
+
+@media (max-width: 412px) {
+
+    .mixPanelBox {
+        padding-left: 10px;
+    }
+    
+}

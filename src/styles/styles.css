@@ -21,4 +21,12 @@
     height: 100vh;
 }
 
+.slick-prev::before, .slick-next::before {
+    color: #61c9b7 !important;
+}
+
+.slick-track {
+    min-height: 305px !important;
+}
+
 

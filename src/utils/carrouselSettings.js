@@ -12,7 +12,8 @@ const carrouselSettings = {
                 slidesToShow: 4,
                 slidesToScroll: 4,
                 infinite: true,
-                dots: true
+                dots: true,
+                initialSlide: 0
             }  
         },
         {
@@ -20,29 +21,23 @@ const carrouselSettings = {
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                initialSlide: 3
+                initialSlide: 0
             }
         },
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                initialSlide: 3
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 2,
+                initialSlide: 0
             }
         },
         {
             breakpoint: 450,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                initialSlide: 0
             }
         }
     ]
