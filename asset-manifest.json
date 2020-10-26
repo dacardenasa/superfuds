@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/superfuds/static/css/main.a4ecd724.chunk.css",
+    "main.css": "/superfuds/static/css/main.bf20a6f2.chunk.css",
     "main.js": "/superfuds/static/js/main.6f1b582e.chunk.js",
     "main.js.map": "/superfuds/static/js/main.6f1b582e.chunk.js.map",
     "runtime-main.js": "/superfuds/static/js/runtime-main.47935a93.js",
@@ -9,10 +9,10 @@
     "static/js/2.ec8ea2c3.chunk.js": "/superfuds/static/js/2.ec8ea2c3.chunk.js",
     "static/js/2.ec8ea2c3.chunk.js.map": "/superfuds/static/js/2.ec8ea2c3.chunk.js.map",
     "index.html": "/superfuds/index.html",
-    "precache-manifest.8de435f011a0b761f148c7a957626265.js": "/superfuds/precache-manifest.8de435f011a0b761f148c7a957626265.js",
+    "precache-manifest.85cef40a019694f4856b29cf7d8eeef7.js": "/superfuds/precache-manifest.85cef40a019694f4856b29cf7d8eeef7.js",
     "service-worker.js": "/superfuds/service-worker.js",
     "static/css/2.1cd5c093.chunk.css.map": "/superfuds/static/css/2.1cd5c093.chunk.css.map",
-    "static/css/main.a4ecd724.chunk.css.map": "/superfuds/static/css/main.a4ecd724.chunk.css.map",
+    "static/css/main.bf20a6f2.chunk.css.map": "/superfuds/static/css/main.bf20a6f2.chunk.css.map",
     "static/js/2.ec8ea2c3.chunk.js.LICENSE.txt": "/superfuds/static/js/2.ec8ea2c3.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/superfuds/static/media/Gilroy-Light.c62aded7.otf",
     "static/media/logo.svg": "/superfuds/static/media/logo.84cb5ac5.svg",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.47935a93.js",
     "static/css/2.1cd5c093.chunk.css",
     "static/js/2.ec8ea2c3.chunk.js",
-    "static/css/main.a4ecd724.chunk.css",
+    "static/css/main.bf20a6f2.chunk.css",
     "static/js/main.6f1b582e.chunk.js"
   ]
 }
