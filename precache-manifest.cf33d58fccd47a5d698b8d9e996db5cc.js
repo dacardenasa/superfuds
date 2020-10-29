@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee3a242789b7b2abb64c7036adde2b9b",
+    "revision": "80e6e93190aeb70e952fcba5e7e53e44",
     "url": "/superfuds/index.html"
   },
   {
-    "revision": "495fc135ec573eb0a428",
+    "revision": "d4627b22bae9bd2cd787",
     "url": "/superfuds/static/css/2.1cd5c093.chunk.css"
   },
   {
-    "revision": "044cd0d5857b90f952ab",
+    "revision": "cf3c96cf888d7c6ac34d",
     "url": "/superfuds/static/css/main.0a8673fe.chunk.css"
   },
   {
-    "revision": "495fc135ec573eb0a428",
-    "url": "/superfuds/static/js/2.ec8ea2c3.chunk.js"
+    "revision": "d4627b22bae9bd2cd787",
+    "url": "/superfuds/static/js/2.009141b8.chunk.js"
   },
   {
     "revision": "78fd0f62364854e39c53711d027f73a3",
-    "url": "/superfuds/static/js/2.ec8ea2c3.chunk.js.LICENSE.txt"
+    "url": "/superfuds/static/js/2.009141b8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "044cd0d5857b90f952ab",
-    "url": "/superfuds/static/js/main.a7c716bb.chunk.js"
+    "revision": "cf3c96cf888d7c6ac34d",
+    "url": "/superfuds/static/js/main.87eff0cd.chunk.js"
   },
   {
     "revision": "36298fc22f95b73c3963",
