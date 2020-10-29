@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../assets/img/logo.svg'
 import styles from './Header.module.css';
-import toggleSearchInput from '../../utils/searchIcon';
 import ShoppingCartButton from '../../components/ShoppingCartButton/ShopingCartButton';
 
 const Header = () => {
+
+    const [searchBoxResponsive, setSearchBoxResponsive] = useState<boolean>(false)
+
+    function toggleSearchInput():void {
+        searchBoxResponsive ? setSearchBoxResponsive(false)
+                            : setSearchBoxResponsive(true);
+    }
+
     return(
         <div className={ styles.headerBox }>
             <div className={ styles.containerBox }>
@@ -52,7 +59,7 @@ const Header = () => {
                 
             </div>
 
-            <div className={ styles.searchBoxResponsive } id="searchBoxResponsive">
+            <div className={ styles.searchBoxResponsive } style={ searchBoxResponsive ? { display: 'block' } : { display: 'none' } }>
                 <input type="text" className={ styles.inputSearch } placeholder="Busca marcas y productos"/>
             </div>
 

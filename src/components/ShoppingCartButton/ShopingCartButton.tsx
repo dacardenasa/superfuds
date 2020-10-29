@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import store from '../../stateManagment/store';
-import { showShoppingCart } from '../../utils/shoppingCart';
+import { toggleShoppingCart } from '../../stateManagment/actionCreators';
 import styles from './ShopingCartButton.module.css';
 
 const ShoppingCartButton = () => {
@@ -8,12 +8,16 @@ const ShoppingCartButton = () => {
     const [ products, setProducts ] = useState<number>();
 
     store.subscribe( () => {
-        const products = store.getState().cart;
+        const products = store.getState().reducer.cart;
         const totalProducts:number = products.reduce( (accumulator:number, currentValue:any):number => {
             return accumulator + currentValue.quantity;
         },0);
         setProducts(totalProducts);
     });
+
+    function showShoppingCart() {
+        store.dispatch(toggleShoppingCart(true));
+    }
 
     return(
         <div className={ styles.shoppingCartBox }>

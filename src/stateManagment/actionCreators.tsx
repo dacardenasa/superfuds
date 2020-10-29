@@ -1,6 +1,5 @@
 import IObjectShopingCart from '../consts/IObjectShoppingCart';
 
-
 const addToCart = (product:IObjectShopingCart) => {
     return {
         type: "ADD_TO_CART",
@@ -22,4 +21,11 @@ const decreaseItemFromCart = (product:IObjectShopingCart) => {
     };
 }
 
-export { addToCart, removeFromCart, decreaseItemFromCart };
+const toggleShoppingCart = (enable:boolean) => {
+    return {
+        type: "TOOGLE_SHOOPING_CART",
+        enable
+    }
+}
+
+export { addToCart, removeFromCart, decreaseItemFromCart, toggleShoppingCart };

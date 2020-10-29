@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import store from '../../stateManagment/store';
-import { addToCart, removeFromCart, decreaseItemFromCart } from '../../stateManagment/actionCreators';
-import { hideShoppingCart } from '../../utils/shoppingCart';
+import { addToCart, removeFromCart, decreaseItemFromCart, toggleShoppingCart } from '../../stateManagment/actionCreators';
 import formatNumber from '../../utils/formatNumber';
 import styles from './ShoppingCart.module.css';
 import IObjectShopingCart from '../../consts/IObjectShoppingCart';
@@ -11,34 +10,42 @@ const ShopingCart = () => {
 
     const [ productsList, setProductsList ] = useState<IObjectShopingCart[]>([]);
     const [ totalProducts, setTotalProducts ] = useState<number>();
+    const [ shoppingCart, setShoppingCart ] = useState<boolean>();
 
     store.subscribe( () => {
-        const products = store.getState().cart;
-        const totalBill = products.reduce( (accumulator:number, currentValue:any):number => {
+        const products = store.getState().reducer.cart;
+        const totalBill = products.reduce( (accumulator:number, currentValue:IObjectShopingCart):number => {
             return accumulator + (currentValue.price * currentValue.quantity);
-        }, 0); 
+        }, 0);
         setProductsList(products);
         setTotalProducts(totalBill);
+
+        const isOpen = store.getState().shoopingCartReducer.enable;
+        setShoppingCart(isOpen);
     });
 
     function addToCartProduct( product:IObjectShopingCart ) {
         store.dispatch(addToCart(product));
     }
 
-    function deleteItemFromCart(product:IObjectShopingCart) {
+    function deleteItemFromCart( product:IObjectShopingCart ) {
         store.dispatch(decreaseItemFromCart(product));
     }
 
-    function removeFromCartProduct(product:IObjectShopingCart) {
+    function removeFromCartProduct( product:IObjectShopingCart ) {
         store.dispatch(removeFromCart(product));
     }
 
-    function disabledButton(productQuantity:number):boolean {
+    function hideShoppingCart() {
+        store.dispatch(toggleShoppingCart(false));
+    }
+
+    function disabledButton( productQuantity:number ):boolean {
         return (productQuantity !== 1) ? false : true;
     }
 
     return(
-        <div className={ styles.containerShoppingCartBack } id="shoppingCart">
+        <div className={ styles.containerShoppingCartBack } style={ shoppingCart ? { right: '0px' } : { right: '-100%' } }>
             <div className={ styles.containerShoppingCart } >
                 <div className={ styles.backOptionBox }>
                     <button className={ styles.customButton } onClick={ hideShoppingCart }>
