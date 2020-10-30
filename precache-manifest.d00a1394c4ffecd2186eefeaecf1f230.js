@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "80e6e93190aeb70e952fcba5e7e53e44",
+    "revision": "f0276bf3377e60227771bf553192c2bd",
     "url": "/superfuds/index.html"
   },
   {
-    "revision": "d4627b22bae9bd2cd787",
+    "revision": "a7173f8790b921c4e9ac",
     "url": "/superfuds/static/css/2.1cd5c093.chunk.css"
   },
   {
-    "revision": "cf3c96cf888d7c6ac34d",
+    "revision": "1c0ea7d5fc96c55d2f14",
     "url": "/superfuds/static/css/main.0a8673fe.chunk.css"
   },
   {
-    "revision": "d4627b22bae9bd2cd787",
-    "url": "/superfuds/static/js/2.009141b8.chunk.js"
+    "revision": "a7173f8790b921c4e9ac",
+    "url": "/superfuds/static/js/2.43e85e4e.chunk.js"
   },
   {
     "revision": "78fd0f62364854e39c53711d027f73a3",
-    "url": "/superfuds/static/js/2.009141b8.chunk.js.LICENSE.txt"
+    "url": "/superfuds/static/js/2.43e85e4e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf3c96cf888d7c6ac34d",
-    "url": "/superfuds/static/js/main.87eff0cd.chunk.js"
+    "revision": "1c0ea7d5fc96c55d2f14",
+    "url": "/superfuds/static/js/main.8b35914d.chunk.js"
   },
   {
     "revision": "36298fc22f95b73c3963",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8039a005a08fc14e3f74e75d70cfbdb1",
     "url": "/superfuds/static/media/profile.8039a005.jpg"
+  },
+  {
+    "revision": "0fb0324cb70de4b04d37040385fa2890",
+    "url": "/superfuds/static/media/shopping-cart.0fb0324c.svg"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
