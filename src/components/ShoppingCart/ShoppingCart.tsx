@@ -121,15 +121,15 @@ const ShopingCart = () => {
                         </div>
                     </>
                     : 
-                    <div style={{ width: "80%", margin: "0 auto", display: "flex", flexFlow: "column wrap", position: "absolute", left: "10%", top: "15%" }}>
-                        <div className="title" style={{ alignSelf: "center" }}>
-                            <h3 style={{ fontSize: "30px", fontFamily: "Gilroy-ExtraBold" }}>Tus productos</h3>
+                    <div className={ styles.emptyBoxStyles }>
+                        <div className="title">
+                            <h3 className={ styles.emptyShoppingTitleStyles }>Tus productos</h3>
                         </div>
-                        <div className="img-cart" style={{ width: "50%", alignSelf: "center", marginTop: "80px" }}>
-                            <img src={ shoppingCartLogo } alt="cart" style={{ width: "80%" }}/>
+                        <div className={ styles.emptyImgBoxStyles }>
+                            <img className={ styles.emptyImgStyles} src={ shoppingCartLogo } alt="cart"/>
                         </div>
-                        <div className="description-layout" style={{ width: "50%", margin: "0 auto", fontFamily: "Gilroy-Light" }}>
-                            <p style={{ fontSize: "20px", color: "rgba(37, 193, 106, 0.71)", padding: "20px", lineHeight: "1.5em", textAlign: "center" }}>Aún no tienes productos agregados a tu carrito de compras</p> 
+                        <div className={ styles.descriptionBoxStyles }>
+                            <p className={  styles.descriptionStyles }>Aún no tienes productos agregados a tu carrito de compras</p> 
                         </div>
                         <div className={ styles.totalBox }>
                             <h2>Total:</h2>
