@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import store from '../../stateManagment/store';
 import { addToCart, removeFromCart, decreaseItemFromCart, toggleShoppingCart } from '../../stateManagment/actionCreators';
 import formatNumber from '../../utils/formatNumber';
+import shoppingCartLogo from '../../assets/img/shopping-cart.svg';
 import styles from './ShoppingCart.module.css';
 import IObjectShopingCart from '../../consts/IObjectShoppingCart';
 
@@ -53,69 +54,89 @@ const ShopingCart = () => {
                     </button>
                     <span className={ styles.spanBackButton }>Volver a la tienda</span>
                 </div>
-                <div className={ styles.shoppingCartHeader }>
-                    <h1>Carrito de Compras</h1>
-                    <h3 className={ styles.numberItems }>{ productsList.length } <span className={ styles.itemSpan }>item(s)</span></h3>
-                </div>
-                <div className={ styles.headerBox }>
-                    <div className={ styles.columnHeader }>
-                        Item
-                    </div>
-                    <div className={ styles.columnHeader }>
-                        Cantidad
-                    </div>
-                    <div className={ styles.columnHeader }>
-                        Precio
-                    </div>
-                    <div className={ styles.columnHeader }>
-                    </div>
-                </div>
-                <div className={ styles.tableProducts }>
-                    { productsList.length > 0 ?
-                        productsList.map( product => {
-                            return(
-                                <div key={ product.id } className={ styles.bodyBox }>
-                                    <div className={ styles.columnBody }>
-                                        <div className={ styles.containerImg }>
-                                            <img src={ product.image } className={ styles.imgProduct } alt={ `img-${product.supplier}` } />
+
+                { productsList.length > 0 ?
+                    <>
+                        <div className={ styles.shoppingCartHeader }>
+                            <h1>Carrito de Compras</h1>
+                            <h3 className={ styles.numberItems }>{ productsList.length } <span className={ styles.itemSpan }>item(s)</span></h3>
+                        </div>
+                        <div className={ styles.headerBox }>
+                            <div className={ styles.columnHeader }>
+                                Item
+                            </div>
+                            <div className={ styles.columnHeader }>
+                                Cantidad
+                            </div>
+                            <div className={ styles.columnHeader }>
+                                Precio
+                            </div>
+                            <div className={ styles.columnHeader }>
+                            </div>
+                        </div>
+                        <div className={ styles.tableProducts }>
+                            { 
+                                productsList.map( product => {
+                                    return(
+                                        <div key={ product.id } className={ styles.bodyBox }>
+                                            <div className={ styles.columnBody }>
+                                                <div className={ styles.containerImg }>
+                                                    <img src={ product.image } className={ styles.imgProduct } alt={ `img-${product.supplier}` } />
+                                                </div>
+                                                <div className={ styles.descriptionProduct}>
+                                                    <h4 className={ styles.title }>{ product.title }</h4>
+                                                    <h4 className={ styles.resume }>{ `x ${ product.units } - ${ product.content } c/u` }</h4>
+                                                    <h4 className={ styles.supplier }>{ product.supplier }</h4>
+                                                </div>
+                                            </div>
+                                            <div className={ styles.columnBody }>
+                                                <button 
+                                                    className={ product.quantity === 1 ? styles.customButtonDelete : styles.customButton }
+                                                    onClick={ () => deleteItemFromCart(product) }
+                                                    disabled={disabledButton(product.quantity)}
+                                                    >
+                                                    <i className="fa fa-minus-circle" aria-hidden="true"></i>
+                                                </button>
+                                                <span className={ styles.spanQuantity }>{ product.quantity }</span>
+                                                <button className={ styles.customButton } onClick={ () => addToCartProduct(product) }>
+                                                    <i className="fa fa-plus-circle" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                            <div className={ styles.columnBody }>
+                                                <h2 className={ styles.priceProduct }><span className={ styles.currencyProduct }>$ </span>{ formatNumber((product.price * product.quantity)) }</h2>
+                                            </div>
+                                            <div className={ styles.columnBody }>
+                                                <button className={ styles.customButtonDelete } onClick={ () => removeFromCartProduct(product) }>
+                                                    <i className="fa fa-trash" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className={ styles.descriptionProduct}>
-                                            <h4 className={ styles.title }>{ product.title }</h4>
-                                            <h4 className={ styles.resume }>{ `x ${ product.units } - ${ product.content } c/u` }</h4>
-                                            <h4 className={ styles.supplier }>{ product.supplier }</h4>
-                                        </div>
-                                    </div>
-                                    <div className={ styles.columnBody }>
-                                        <button 
-                                            className={ product.quantity === 1 ? styles.customButtonDelete : styles.customButton }
-                                            onClick={ () => deleteItemFromCart(product) }
-                                            disabled={disabledButton(product.quantity)}
-                                            >
-                                            <i className="fa fa-minus-circle" aria-hidden="true"></i>
-                                        </button>
-                                        <span className={ styles.spanQuantity }>{ product.quantity }</span>
-                                        <button className={ styles.customButton } onClick={ () => addToCartProduct(product) }>
-                                            <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                    <div className={ styles.columnBody }>
-                                        <h2 className={ styles.priceProduct }><span className={ styles.currencyProduct }>$ </span>{ formatNumber((product.price * product.quantity)) }</h2>
-                                    </div>
-                                    <div className={ styles.columnBody }>
-                                        <button className={ styles.customButtonDelete } onClick={ () => removeFromCartProduct(product) }>
-                                            <i className="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            );
-                        })
-                        : null
-                    }
-                </div>
-                <div className={ styles.totalBox }>
-                    <h2>Total:</h2>
-                    <h2 className={ styles.spanTotalPrice }>${ productsList.length > 0 ? formatNumber(totalProducts) : 0 }</h2>
-                </div>
+                                    );
+                                })
+                            }
+                        </div>
+                        <div className={ styles.totalBox }>
+                            <h2>Total:</h2>
+                            <h2 className={ styles.spanTotalPrice }>${ productsList.length > 0 ? formatNumber(totalProducts) : 0 }</h2>
+                        </div>
+                    </>
+                    : 
+                    <div style={{ width: "80%", margin: "0 auto", display: "flex", flexFlow: "column wrap", position: "absolute", left: "10%", top: "15%" }}>
+                        <div className="title" style={{ alignSelf: "center" }}>
+                            <h3 style={{ fontSize: "30px", fontFamily: "Gilroy-ExtraBold" }}>Tus productos</h3>
+                        </div>
+                        <div className="img-cart" style={{ width: "50%", alignSelf: "center", marginTop: "80px" }}>
+                            <img src={ shoppingCartLogo } alt="cart" style={{ width: "80%" }}/>
+                        </div>
+                        <div className="description-layout" style={{ width: "50%", margin: "0 auto", fontFamily: "Gilroy-Light" }}>
+                            <p style={{ fontSize: "20px", color: "rgba(37, 193, 106, 0.71)", padding: "20px", lineHeight: "1.5em", textAlign: "center" }}>Aún no tienes productos agregados a tu carrito de compras</p> 
+                        </div>
+                        <div className={ styles.totalBox }>
+                            <h2>Total:</h2>
+                            <h2 className={ styles.spanTotalPrice }>${ productsList.length > 0 ? formatNumber(totalProducts) : 0 }</h2>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     );
