@@ -25,31 +25,14 @@ const ShopingCart = () => {
         setShoppingCart(isOpen);
     });
 
-    function addToCartProduct( product:IObjectShopingCart ) {
-        store.dispatch(addToCart(product));
-    }
-
-    function deleteItemFromCart( product:IObjectShopingCart ) {
-        store.dispatch(decreaseItemFromCart(product));
-    }
-
-    function removeFromCartProduct( product:IObjectShopingCart ) {
-        store.dispatch(removeFromCart(product));
-    }
-
-    function hideShoppingCart() {
-        store.dispatch(toggleShoppingCart(false));
-    }
-
-    function disabledButton( productQuantity:number ):boolean {
-        return (productQuantity !== 1) ? false : true;
-    }
-
     return(
         <div className={ styles.containerShoppingCartBack } style={ shoppingCart ? { right: '0px' } : { right: '-100%' } }>
             <div className={ styles.containerShoppingCart } >
                 <div className={ styles.backOptionBox }>
-                    <button className={ styles.customButton } onClick={ hideShoppingCart }>
+                    <button 
+                        className={ styles.customButton } 
+                        onClick={ () => store.dispatch(toggleShoppingCart(false)) }
+                        >
                         <i className="fa fa-angle-left" aria-hidden="true"></i>
                     </button>
                     <span className={ styles.spanBackButton }>Volver a la tienda</span>
@@ -92,13 +75,16 @@ const ShopingCart = () => {
                                             <div className={ styles.columnBody }>
                                                 <button 
                                                     className={ product.quantity === 1 ? styles.customButtonDelete : styles.customButton }
-                                                    onClick={ () => deleteItemFromCart(product) }
-                                                    disabled={disabledButton(product.quantity)}
+                                                    onClick={ () => store.dispatch(decreaseItemFromCart(product)) }
+                                                    disabled={product.quantity === 1 && true}
                                                     >
                                                     <i className="fa fa-minus-circle" aria-hidden="true"></i>
                                                 </button>
                                                 <span className={ styles.spanQuantity }>{ product.quantity }</span>
-                                                <button className={ styles.customButton } onClick={ () => addToCartProduct(product) }>
+                                                <button 
+                                                    className={ styles.customButton } 
+                                                    onClick={ () => store.dispatch(addToCart(product)) }
+                                                    >
                                                     <i className="fa fa-plus-circle" aria-hidden="true"></i>
                                                 </button>
                                             </div>
@@ -106,7 +92,7 @@ const ShopingCart = () => {
                                                 <h2 className={ styles.priceProduct }><span className={ styles.currencyProduct }>$ </span>{ formatNumber((product.price * product.quantity)) }</h2>
                                             </div>
                                             <div className={ styles.columnBody }>
-                                                <button className={ styles.customButtonDelete } onClick={ () => removeFromCartProduct(product) }>
+                                                <button className={ styles.customButtonDelete } onClick={ () => store.dispatch(removeFromCart(product)) }>
                                                     <i className="fa fa-trash" aria-hidden="true"></i>
                                                 </button>
                                             </div>

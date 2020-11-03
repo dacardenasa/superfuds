@@ -12,16 +12,13 @@ const ShoppingCartButton = () => {
         const totalProducts:number = products.reduce( (accumulator:number, currentValue:any):number => {
             return accumulator + currentValue.quantity;
         },0);
-        setProducts(totalProducts);
+        
+        totalProducts !== 0 && setProducts(totalProducts);
     });
-
-    function showShoppingCart() {
-        store.dispatch(toggleShoppingCart(true));
-    }
 
     return(
         <div className={ styles.shoppingCartBox }>
-            <button className={ styles.customButton } onClick={ showShoppingCart } >
+            <button className={ styles.customButton } onClick={ () => store.dispatch(toggleShoppingCart(true)) } >
                 <i className={ styles.shoppingCartIcon + " fa fa-shopping-cart" } aria-hidden="true"></i>
             </button>
             <span className={ styles.productsQuantityBox }>{ products }</span>
